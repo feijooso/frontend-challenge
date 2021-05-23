@@ -26,8 +26,9 @@ function CallPageMethod(query) {
 }
 
 function CallPageMethods() {
-	CallPageMethod("Rome");
-	CallPageMethod("London");
-	CallPageMethod("Madrid");
-	CallPageMethod("Mumbai");
+	var cities = ["Rome", "London", "Madrid", "Mumbai", "Milan", "Toronto"];
+	for (var i = cities.length - 1; i >= 0; i--) {
+		CallPageMethod(cities[i]);
+	}
+
 }
