@@ -4,6 +4,7 @@ function CallPageMethod(methodName, query) {
     $.ajax({
         type: "GET",
         url: loc + "/" + methodName,
+        cache: false,
         data: {
             access_key: '347ecee25ef29efa0cd06cd0da0d32dd',
             query: query
@@ -13,7 +14,8 @@ function CallPageMethod(methodName, query) {
 
     .done(function(data) {
         console.log(data);
-        resultado = document.querySelector('#demo');
+        var tag = "#" + data.location.name;
+        resultado = document.querySelector(tag);
         resultado.innerHTML = data.current.temperature;
         return(data.current.temperature);
 
@@ -22,4 +24,11 @@ function CallPageMethod(methodName, query) {
     .fail(function(){
         alert("error");
     });
+}
+
+function CallPageMethods(methodName) {
+	CallPageMethod(methodName, "Rome");
+	CallPageMethod(methodName, "London");
+	CallPageMethod(methodName, "Madrid");
+	CallPageMethod(methodName, "Mumbai");
 }
