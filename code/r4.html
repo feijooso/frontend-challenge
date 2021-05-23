@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="r4.js"></script>
+	<link rel="stylesheet" href="r3.css">
+	<title>Web R4 - API</title>
+</head>
+<body>
+	<button onclick="CallPageMethod('current', 'New York')">NY</button>
+	<button onclick="CallPageMethod('current', 'London')">London</button>
+	<table>
+		<thead>
+		<tr>
+			<th>Ciudad</th>
+			<th>Temperatura</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr>
+			<td>New York</td>
+			<td id="demo"></td>
+		</tr>
+		<tr>
+			<td>London</td>
+			<td id="demo1"></td>
+		</tr>
+		</tbody>
+	</table>
+
+
+</body>
+</html>
